@@ -1,0 +1,89 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                 Bedrock Lobby Plugin                 | #
+# +------------------------------------------------------+ #
+############################################################
+
+######################### General ##########################
+NetworkIp: "mc.boundbybedrock.com"
+
+# Should all player inventories be cleared on join? 
+# NOTE: players with the permission "bl.invclearexempt" are exempt from this rule.
+ClearInventoryOnJoin: true
+
+#################### Player Cloak Items ####################
+
+# Should players be given the invisibility toggle item on join?
+GivePlayerCloak: true
+
+# Item NAME of Cloak Device
+CloakItem: 
+
+###################### Potion Effects ######################
+
+# Should existing potion effects be removed on join? (true/false)
+RemovePotions: true
+
+# Which potion effects should be given on join? (true/false)
+Jump: true
+Speed: true
+Confusion: false
+Wither: false
+Blindness: false
+DamageResistance: false
+FastDigging: false
+FireResistance: false
+Harm: false
+Heal: false
+Hunger: false
+Strength: false 
+Invisibility: false 
+NightVision: false 
+Posion: false 
+Regeneration: false 
+Slowness: false
+SlowDigging: false
+WaterBreathing: false 
+Weakness: false
+
+# How long should each potion effect last for? (Integer Value in Ticks)
+JumpTime: 1000000
+SpeedTime: 1000000
+ConfusionTime: 0
+WitherTime: 0
+BlindnessTime: 0
+DamageResistanceTime: 0
+FastDiggingTime: 0
+HarmTime: 0
+HealTime: 0
+HungerTime: 0
+StrengthTime: 0
+InvisibilityTime: 0
+NightVisionTime:
+PoisonTime: 0
+RegenerationTime: 0
+SlownessTime: 0
+SlowDiggingTime: 0
+WaterBreathingTime: 0
+WeaknessTime: 0
+
+# How potent should the effect be? (1 is normal potion/2 is potion II/ etc.)
+JumpLevel: 2
+SpeedLevel: 4
+ConfusionLevel: 1
+WitherLevel: 1
+BlindnessLevel: 1
+DamageResistanceLevel: 1
+FastDiggingLevel: 1
+HarmLevel: 1
+HealLevel: 1
+HungerLevel: 1
+StrengthLevel: 1
+InvisibilityLevel: 1
+NightVisionLevel: 1
+PoisonLevel: 1
+RegenerationLevel: 1
+SlownessLevel: 1
+SlowDiggingLevel: 1
+WaterBreathingLevel: 1
+WeaknessLevel: 1

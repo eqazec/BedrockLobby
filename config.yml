@@ -17,7 +17,7 @@ ClearInventoryOnJoin: true
 GivePlayerCloak: true
 
 # Item NAME of Cloak Device
-CloakItem: 
+CloakItem: Material.
 
 ###################### Potion Effects ######################
 

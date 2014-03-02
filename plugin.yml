@@ -1,4 +1,4 @@
 name: BedrockLobby
 version: 1.0beta
 
-main: io.github.eqazec.BedrockLobby.BedrockLobby
+main: io.github.eqazec.lobby.BedrockLobby

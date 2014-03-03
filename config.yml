@@ -8,18 +8,21 @@
 NetworkIp: "mc.boundbybedrock.com"
 
 # Should all player inventories be cleared on join? 
-# NOTE: players with the permission "bl.invclearexempt" are exempt from this rule.
+# NOTE: The inventories of players with the permission "bl.invclearexempt" will NOT be cleared.
 ClearInventoryOnJoin: true
 
 #################### Player Cloak Items ####################
 
-# Should players be given the invisibility toggle item on join?
+# Should players be given the invisibility toggle item when they join?
 GivePlayerCloak: true
 
 # Item NAME of Cloak Device
-CloakItem: Material.
+CloakItem: "ANVIL"
 
 ###################### Potion Effects ######################
+
+# Should players be given potions when they join? (true/false)
+JoinPotions: true
 
 # Should existing potion effects be removed on join? (true/false)
 RemovePotions: true
@@ -67,9 +70,9 @@ SlowDiggingTime: 0
 WaterBreathingTime: 0
 WeaknessTime: 0
 
-# How potent should the effect be? (1 is normal potion/2 is potion II/ etc.)
-JumpLevel: 2
-SpeedLevel: 4
+# How potent should the effect be? (1 is normal potion, 2 is potion II, etc.)
+JumpLevel: 1
+SpeedLevel: 3
 ConfusionLevel: 1
 WitherLevel: 1
 BlindnessLevel: 1

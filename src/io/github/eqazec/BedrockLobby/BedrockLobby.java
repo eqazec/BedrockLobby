@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
@@ -39,19 +40,33 @@ public final class BedrockLobby extends JavaPlugin implements Listener
 
         Player player = event.getPlayer();
         Material cloakItem = Material.getMaterial(getConfig().getString("CloakItem"));
+        Inventory inv = player.getInventory();
 
         // Clears player inventory on join if that mechanic is enabled and the
         // player is not exempt.
         if (getConfig().getBoolean("ClearInventoryOnJoin") && !player.hasPermission("bl.invclearexempt"))
-            player.getInventory().clear();
+        {
+            inv.clear();
+        }
 
         // If enabled, give players join potions per configured settings
         if (getConfig().getBoolean("JoinPotions"))
+        {
             handlePotions(player);
+        }
 
         // If GivePlayerCloak is true, gives the player a cloak item.
         if (getConfig().getBoolean("GivePlayerCloak"))
-            player.getInventory().addItem(new ItemStack(cloakItem, 1));
+        {
+            if (!inv.contains(cloakItem))
+            {
+                inv.addItem(new ItemStack(cloakItem, 1));
+            } else if (!inv.contains(cloakItem, 1))
+            {
+                inv.remove(cloakItem);
+                inv.addItem(new ItemStack(cloakItem, 1));
+            }
+        }
     }
 
     private void handlePotions(Player player)
@@ -61,7 +76,7 @@ public final class BedrockLobby extends JavaPlugin implements Listener
         {
             player.removePotionEffect(effect.getType());
         }
-        if (getConfig().getBoolean("Jump") && player.hasPermission("b1.potjump"))
+        if (getConfig().getBoolean("Jump") && player.hasPermission("bl.potjump"))
         {
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP,
                     getConfig().getInt("JumpTime"),

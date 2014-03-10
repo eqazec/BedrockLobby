@@ -13,11 +13,17 @@ ClearInventoryOnJoin: true
 
 #################### Player Cloak Items ####################
 
-# Should players be given the invisibility toggle item when they join?
-GivePlayerCloak: true
+# Should players be given the cloak when they join?
+EnableCloak: true
 
-# Item NAME of Cloak Device
-CloakItem: "ANVIL"
+# Item Material Type of Cloaking Device
+CloakMaterialType: "ANVIL"
+
+# Custom Name for Cloaking Device
+CustomCloakName: "&6Cloaking Device"
+
+# Custom Lore for Cloaking Device
+CustomCloakLore: "&2Right-click to toggle player visibility."
 
 ###################### Potion Effects ######################
 

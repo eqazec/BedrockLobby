@@ -5,30 +5,35 @@
 ############################################################
 
 ######################### General ##########################
-NetworkIp: "mc.boundbybedrock.com"
+NETWORK_IP: "mc.boundbybedrock.com"
+
+# Should a MOTD be sent to the players on join?
+SEND_MOTD: true
+# What should that MOTD be?
+JOIN_MOTD: "FISH"
 
 # Should all player inventories be cleared on join? 
 # NOTE: The inventories of players with the permission "bl.invclearexempt" will NOT be cleared.
-ClearInventoryOnJoin: true
+CLEAR_INV_ON_JOIN: true
 
 #################### Player Cloak Items ####################
 
 # Should players be given the cloak when they join?
-EnableCloak: true
+CLOAK_ENABLED: true
 
 # Item Material Type of Cloaking Device
-CloakMaterialType: "ANVIL"
+CLOAK_MATERIAL_TYPE: "ANVIL"
 
 # Custom Name for Cloaking Device
-CustomCloakName: "&6Cloaking Device"
+CLOAK_NAME: "&6Cloaking Device"
 
 # Custom Lore for Cloaking Device
-CustomCloakLore: "&2Right-click to toggle player visibility."
+CLOAK_LORE: "&2Toggles visibility"
 
 ###################### Potion Effects ######################
 
 # Should players be given potions when they join? (true/false)
-JoinPotions: true
+POTIONS_ENABLED: true
 
 # Should existing potion effects be removed on join? (true/false)
 RemovePotions: true
